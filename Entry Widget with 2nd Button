@@ -1,0 +1,25 @@
+g = Gui()
+g.title('circle demo')
+canvas = g.ca(width = 500, height = 500, bg = 'white')
+circle = None
+
+def callback1():
+  global circle
+  circle = canvas.circle([0,0], 100)
+  
+def callback2();
+
+  if circle == None:
+    return
+
+  color = entry.get()
+  try:
+    circle.config(fill = color)
+  except TclError, message:
+    print (message)
+    
+g.bu(text = 'Create circle', command = callback1)
+entry = g.en()
+g.bu(text = 'Change color', command = callback2)
+
+g.mainloop()
