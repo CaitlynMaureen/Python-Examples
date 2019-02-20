@@ -1,0 +1,14 @@
+def increment(t1, second):
+  second = time.second
+  t3 = Time()
+  t3.hour = t1.hour
+  t3.minute = t1.minute
+  t3.second = t1.second + 1
+  
+  if (t3.second >= 60):
+    t3.second - 60
+    t3.minute = t1.minute + 1
+    
+  print('%.2d:%.2d:%.2d' % (t3.hour, t3.minute, t3.second))
+  
+  increment(t1, second)
