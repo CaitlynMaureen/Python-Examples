@@ -1,0 +1,13 @@
+from swampy.Gui import*
+
+g = Gui()
+g.title = "Gui"
+
+def make_circle():
+  canvas.circle([0,0], 55, fill = "red", outline = "white", width = 2)
+  
+canvas = g.ca(500, 500, gb = "blank")
+
+g.bu(text = "make me a circle", command = make_circle)
+
+g.mainloop()
