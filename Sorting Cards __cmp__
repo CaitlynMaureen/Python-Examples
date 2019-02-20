@@ -1,0 +1,22 @@
+class Deck(object):
+
+  def__int__(self):
+    self.cards = []
+    for suit in range(4):
+      for rank in range(1, 14):
+        card = Card(suit, rank)
+        self.cards.append(card)
+    self.card_idx = 0
+    
+  def__str__(self):
+    res = []
+    for card in self.cards:
+      res.append(str(card))
+    return '\n'.join(res)
+    
+  def__iter__(self):
+    return self
+    
+  def sort(self):
+    self.cards.sort(cmp = Card.__cmp__)
+    return None
